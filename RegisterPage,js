@@ -1,0 +1,35 @@
+document.getElementById('registerForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    var firstName = document.getElementById('firstName').value;
+    var lastName = document.getElementById('lastName').value;
+    var collegeEmail = document.getElementById('collegeEmail').value;
+    var mobileNumber = document.getElementById('mobileNumber').value;
+    var password = document.getElementById('password').value;
+
+    if (!validateEmail(collegeEmail)) {
+        alert('Please enter a valid college email address.');
+        return;
+    }
+
+    if (!validateMobileNumber(mobileNumber)) {
+        alert('Please enter a valid 10-digit mobile number.');
+        return;
+    }
+
+    if (password.length < 6) {
+        alert('Password must be at least 6 characters long.');
+        return;
+    }
+
+    alert('Registration successful!');
+});
+
+function validateEmail(email) {
+    var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+}
+
+function validateMobileNumber(mobileNumber) {
+    var re = /^[0-9]{10}$/;
+    return re.test(mobileNumber);
+}

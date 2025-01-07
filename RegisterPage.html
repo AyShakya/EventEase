@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventEase Registration</title>
+    <link rel="stylesheet" href="RegisterPage.css">
+</head>
+<body>
+    <div class="register-container">
+        <div class="left-panel">
+            <img src="7.jpg" alt="EventEase Logo">
+        </div>
+        <div class="right-panel">
+            <h2>Join EventEase</h2>
+            <p>Create an account to get started:</p>
+            <form id="registerForm">
+                <div class="input-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+                <div class="input-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+                <div class="input-group">
+                    <label for="collegeEmail">College Email</label>
+                    <input type="email" id="collegeEmail" name="collegeEmail" required>
+                </div>
+                <div class="input-group">
+                    <label for="mobileNumber">Mobile Number</label>
+                    <input type="tel" id="mobileNumber" name="mobileNumber" pattern="[0-9]{10}" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="register-button">Register</button>
+            </form>
+        </div>
+    </div>
+    <script src="RegisterPage.js"></script>
+</body>
+</html>

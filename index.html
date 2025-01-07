@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventEase</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="shortcut icon" href="favicon-32x32.png" type="image/x-icon">
+</head>
+<body>
+    <main>
+        <div class="navbar">
+            <div class="symbol"><a href="#"><img id="symbol" src="Icon.png" alt=""></a></div>
+            <div class="WebName"><img src="Logopng.png" id="WebName"></div>
+            <div class="register">
+                <a href="LoginPage.html"><button class="registerbuttons" id="loginbtn" type="button">Login</button></a>
+                <a href="RegisterPage.html"><button class="registerbuttons" id="registerbtn" type="button">Register</button></a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="tag">
+                <div class="tagline">We Help Make Great Events Happen</div>  
+                <div class="tagitems">
+                    <input type="text" id="SearchEvent" placeholder="Name">
+                    <input type="date" id="SearchDate">
+                    <a href="EventDetail.html">
+                        <button id="SearchBtn">
+                            <i class="fas fa-search"></i>Search
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="events">
+            <div class="EventHead">Events For You</div>
+            <div class="EventElements">
+                <div class="event"> 
+                    <center><img src="3.jpg" alt="Music Concert"> </center>
+                    <div class="event-info"> 
+                        <h3>Music Concert</h3> 
+                        <p>Join us for an evening of live music with renowned artists.</p> 
+                    </div> 
+                </div>
+                <div class="event"> 
+                    <center><img src="4.jpg" alt="Blood Donation"> </center>
+                    <div class="event-info"> 
+                        <h3>Blood Donation Camp</h3> 
+                        <p>Join us for an evening of live music with renowned artists.</p> 
+                    </div> 
+                </div>
+                <div class="event"> 
+                    <center><img src="5.jpg" alt="Chess Tournament"> </center>
+                    <div class="event-info"> 
+                        <h3>Chess Tournament</h3> 
+                        <p>Join us for an evening of live music with renowned artists.</p> 
+                    </div> 
+                </div>
+            </div>
+            <a href="EventTable.html"><button id="ShowMore">Show More</button></a>
+        </div>
+        <div class="questions"> 
+            <div class="Quess">
+                <div class="QuesHead">We Ready For Your Questions</div> 
+                <div class="QuesBox">
+                    <form class="contact-form"> 
+                        <div class="form-group"> 
+                            <label for="name">Name</label> 
+                            <input type="text" id="name" name="name" placeholder="Enter your name">
+                        </div> 
+                        <div class="form-group"> 
+                            <label for="email">Email</label> 
+                            <input type="email" id="email" name="email" placeholder="Enter your email"> 
+                        </div>
+                            <div class="form-group"> 
+                                <label for="message">Message</label> 
+                                <textarea id="message" name="message" placeholder="Enter your message"></textarea>
+                            </div> 
+                        <button type="submit">Submit</button> 
+                    </form> 
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section contact-info">
+                    <h4>Contact Us</h4>
+                    <p>Email: <a href="#">ayshakya24@gmail.com</a></p>
+                    <p>Phone: +91 7983360991</p>
+                </div>
+                <div class="footer-section designer-credits">
+                    <h4>Designer Credits:</h4>
+                    <p>Designed by <a href="https://designerportfolio.com">Ayush Shakya <br>
+                        Bipul Chamoli <br>
+                        Ayush Raj
+                    </a></p>
+                </div>
+                <div class="footer-section nav-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section social-media">
+                    <h4>Follow Us</h4>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <div class="footer-section copyright">
+                    <p>© Your Company 2025. All rights reserved.</p>
+                    <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a>
+                </div>
+            </div>
+        </footer>
+        
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
