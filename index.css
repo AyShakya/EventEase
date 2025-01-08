@@ -5,12 +5,18 @@
 button{
     text-decoration: none;
 }
+.divider{
+    height: 0vh;
+    width: 100%;
+    border: 2.4px solid #b68f40;
+    box-sizing: border-box;
+}
 .navbar{
     position: fixed;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    height: 14vh;
+    height: 12vh;
     width: 100%;
     background-color: #1c1c1c;
     z-index: 100;
@@ -38,30 +44,67 @@ button{
     align-items: center;
     height: 100%;
 }
+.register h1{
+    /* height: 4vh; */
+    width: auto;
+    color: white;
+    text-align: center;
+    margin-left: 7px;
+    margin-right: 7px;
+}
 .registerbuttons{
     height: 5vh;
     width: 8vw;
+    border-radius: 14px;
+    background-color: #b68f40;
+    color: #1c1c1c;
+    text-decoration: no ne;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+    font-size: 1.8vh;
+}
+.registerbuttons:hover{
+    background-color: #323232;
+    color: #b68f40;
 }
 .container{
     height: 95vh;
     width: 100%;
     position: relative;
-    background-image: url('1.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.8;
+}
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+@keyframes blink {
+    from { border-color: transparent }
+    to { border-color: orange }
+}
+.typing-animation {
+    overflow: hidden;
+    border-right: 0.15em solid orange;
+    white-space: nowrap;
+    font-size: 1.6rem;
+    width: 70vw;
+    animation: typing 3s steps(20, end) forwards, blink .8s infinite;
 }
 .tagline{
     width: 70vw;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
-    font-size: 10vh;
+    font-size: 9vh;
     color: white;
     font-weight: bolder;
     margin-bottom: 5vh;
 }
+
 .tagitems{
     margin-top: 8vh;
     width: auto;
@@ -70,16 +113,26 @@ button{
     justify-content: center;
 }
 #SearchEvent{
-    height: 4.5vh;
+    height: 2vh;
+    padding: 10px;
     width: 25vw;
     margin-right: 20px;
     border-radius: 4px;
 }
 #SearchDate{
     border-radius: 4px;
-    height: 4.5vh;
+    height: 2vh;
+    padding: 10px;
     width: 20vw;
     margin-right: 20px;
+    border-radius: 4px;
+}
+#SearchDate::placeholder, #SearchEvent::placeholder{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2vh;
+    opacity: 0.5;
+    color: black;
+
 }
 #SearchBtn i{
     margin-right: 6px;
@@ -91,12 +144,16 @@ button{
     height: 5vh;
     width: 8vw;
     color: #b68f40;
+    background-color: rgb(0, 0, 0);
+}
+#SearchBtn:hover{
+    color: #c47f00;
     background-color: #1c1c1c;
 }
 .events {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    margin: 0 auto;
+    margin: 15px auto;
     padding: 20px;
     width: 80%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -114,24 +171,40 @@ button{
     flex-wrap: wrap;
     justify-content: space-between;
 }
+.EventElements a{
+    text-decoration: none;
+    color: inherit;
+    width: 31%;
+    margin-bottom: 20px;
+}
 
 .event {
     background-color: #fff;
-    width: 31%;
-    margin-bottom: 20px;
     padding: 10px;
+    width: auto;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid #1c1c1c;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s, cursor 0.3s;
+}
+.event:hover { 
+    transform: scale(1.05); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    cursor: pointer;
 }
 
 .event img {
-    width: auto;
+    width: 90%;
     height: 50vh;
 }
 
 .event-info {
     padding: 10px;
 }
-
+.event-info a{
+    text-decoration: none;
+    color: inherit;
+}
 .event-info h3 {
     margin: 10px 0 5px;
 }
@@ -144,29 +217,39 @@ button{
     display: block;
     width: 100%;
     padding: 10px;
-    background-color: #007bff;
-    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 2vh;
+    background-color: #1c1c1c;
+    color: #b68f40;
     border: none;
     cursor: pointer;
 }
 
 #ShowMore:hover {
-    background-color: #0056b3;
+    background-color: #333232;
 }
 
 .questions { 
+    position: relative;
     font-family: Arial, sans-serif; 
     background-color: #f4f4f4; 
     display: flex; 
     justify-content: center; 
     align-items: center; 
-    height: 100vh; 
+    height: 80vh; 
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('9.jpg'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center;
 } 
 .QuesHead { 
     font-size: 24px; 
     font-weight: bold; 
     margin-bottom: 20px; 
     text-align: center; 
+    color: #f4f4f4;
 } 
 .QuesBox { 
     background-color: #fff; 
@@ -196,20 +279,23 @@ button{
 } 
 .contact-form button { 
     padding: 10px 20px; 
-    background-color: #007bff; 
-    color: white; 
+    background-color: #1c1c1c; 
+    color: #c47f00; 
     border: none; 
     border-radius: 5px; 
     cursor: pointer;
 } 
 .contact-form button:hover { 
-    background-color: #0056b3; 
+    background-color: #323232; 
 }
 .footer {
     background-color: #1c1c1c; 
     color: #fff; 
     padding: 20px 0;
     text-align: center;
+    box-sizing: border-box;
+    border-top: 2px solid #b68f40;
+    border-bottom: 2px solid #b68f40;
 }
 
 .footer-content {
@@ -231,7 +317,7 @@ button{
 }
 
 .footer-section a {
-    color: #007bff;
+    color: #b68f40;
     text-decoration: none;
 }
 
@@ -255,7 +341,7 @@ button{
 }
 
 .social-media a:hover {
-    color: #007bff;
+    color: #fcbe43;
 }
 
 .copyright {

@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('10.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.8;
+}
+.back-button { 
+    position: absolute; 
+    top: 20px; 
+    left: 20px; 
+    font-size: 24px; 
+    color: #333; 
+    text-decoration: none; 
+    background-color: rgba(255, 255, 255, 0.8); 
+    padding: 10px; 
+    border-radius: 50%; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: background-color 0.3s, transform 0.3s; 
+} 
+.back-button:hover { 
+    background-color: rgba(255, 255, 255, 1); 
+    transform: scale(1.1); 
+}
+.event-card {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s, cursor 0.3s;
+    width: 75%;
+}
+.event-card.hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+.event-date {
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px 0 0 8px;
+    width: 80px;
+    transition: background-image 0.3s, background-color 0.3s;
+}
+.event-card.hover .event-date {
+    background-color: transparent;
+    background-image: url('your-image-url.jpg'); 
+    background-size: cover;
+    background-position: center;
+}
+.event-date.red {
+    background-color: #DC143C;
+}
+.event-date.blue {
+    background-color: #6495ED;
+}
+.event-date h2, .event-date p {
+    margin: 0;
+    font-size: 24px;
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+.event-card.hover .event-date h2,
+.event-card.hover .event-date p {
+    opacity: 0;
+}
+.event-details {
+    flex: 1;
+    padding: 0 20px;
+}
+.event-details a{
+    text-decoration: none;
+    color: inherit;
+}
+.event-details h3 {
+    margin: 0;
+    font-size: 20px;
+}
+.event-details p {
+    margin: 5px 0;
+    color: #777;
+}
+.social-icons {
+    display: flex;
+    align-items: center;
+}
+.social-icons a {
+    margin-left: 10px;
+    color: #555;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+.social-icons a:hover {
+    color: #3498db; 
+}
