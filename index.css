@@ -104,7 +104,7 @@ button {
     white-space: nowrap;
     font-size: 1.6rem;
     width: 70vw;
-    animation: typing 3s steps(20, end) forwards, blink .8s infinite;
+    animation: typing 4s steps(20, end) forwards, blink .8s infinite;
 }
 
 .tagline {
