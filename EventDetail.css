@@ -8,6 +8,23 @@ body{
     background-size: cover;
     opacity: 0.8;
 }
+.back-button { 
+    position: absolute; 
+    top: 20px; 
+    left: 20px; 
+    font-size: 24px; 
+    color: #fff; 
+    text-decoration: none; 
+    background-color: rgba(255, 255, 255, 0.2); 
+    padding: 10px; 
+    border-radius: 50%; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    transition: background-color 0.3s, transform 0.3s; 
+} 
+.back-button:hover { 
+    background-color: rgba(255, 255, 255, 0.6); 
+    transform: scale(1.1); 
+}
 .container {
     width: 80vw;
     margin: 0 auto;

@@ -13,7 +13,7 @@ button {
     border: 2.4px solid #b68f40;
     box-sizing: border-box;
 }
-
+/* navbar.............................................................................................................. */
 .navbar {
     position: fixed;
     display: flex;
@@ -74,7 +74,7 @@ button {
     background-color: #323232;
     color: #b68f40;
 }
-
+/* container.........................................................................................................  */
 .container {
     height: 95vh;
     width: 100%;
@@ -137,7 +137,7 @@ button {
     border-radius: 4px;
     height: 2vh;
     padding: 10px;
-    width: 20vw;
+    width: 13vw;
     margin-right: 20px;
 }
 
@@ -167,6 +167,7 @@ button {
     background-color: #1c1c1c;
 }
 
+/* events............................................................................................................. */
 .events {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -251,14 +252,25 @@ button {
 #ShowMore:hover {
     background-color: #333232;
 }
-
+/* create event ........................................................................................................ */
+.create{
+    width: 100%;
+    height: 90vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('12.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .create-event-form {
     background-color: #f4f4f4;
     padding: 20px;
     width: 80%;
     max-width: 600px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 30px auto;
+    margin: auto;
 }
 
 .create-event-form h2 {
@@ -298,12 +310,14 @@ button {
     border-radius: 5px;
     cursor: pointer;
     width: 100%;
+    font-weight: bolder;
 }
 
 .event-form button.submit-button:hover {
     background-color: #323232;
 }
 
+/* QUestonnarie................................................................................................ */
 .questions {
     position: relative;
     font-family: Arial, sans-serif;
@@ -365,12 +379,14 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-weight: bolder;
 }
 
 .contact-form button:hover {
     background-color: #323232;
 }
 
+ /* footer...............................................................................................................  */
 .footer {
     background-color: #1c1c1c;
     color: #fff;
