@@ -29,6 +29,9 @@ body {
     background-color: rgba(255, 255, 255, 1); 
     transform: scale(1.1); 
 }
+#eventCardsContainer{
+    width: 75%;
+}
 .event-card {
     display: flex;
     align-items: center;
@@ -38,7 +41,7 @@ body {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s, cursor 0.3s;
-    width: 75%;
+    width: 100%;
 }
 .event-card.hover {
     transform: scale(1.05);
