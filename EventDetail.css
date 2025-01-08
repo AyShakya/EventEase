@@ -82,6 +82,10 @@ body{
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+.box p a{
+    text-decoration: none;
+    color: skyblue;
+}
 .grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
