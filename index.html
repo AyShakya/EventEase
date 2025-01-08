@@ -25,7 +25,7 @@
                 <div class="tagitems">
                     <input type="text" id="SearchEvent" placeholder="Name">
                     <input type="date" id="SearchDate">
-                    <a href="EventDetail.html">
+                    <a href="#.html">
                         <button id="SearchBtn">
                             <i class="fas fa-search"></i>Search
                         </button>
@@ -67,6 +67,34 @@
             </div>
             <a href="EventCalender.html"><button id="ShowMore">Show More</button></a>
         </div>
+        <div class="divider"></div>
+        <div class="create-event-form">
+            <h2>Create an Event</h2>
+            <form class="event-form">
+                <div class="form-group">
+                    <label for="eventImage">Event Image</label>
+                    <input type="file" id="eventImage" name="eventImage" accept="image/*" required>
+                </div>
+                <div class="form-group">
+                    <label for="eventName">Event Name</label>
+                    <input type="text" id="eventName" name="eventName" placeholder="Enter the event name" required>
+                </div>
+                <div class="form-group">
+                    <label for="eventDescription">Event Description</label>
+                    <textarea id="eventDescription" name="eventDescription" placeholder="Enter event details" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="eventDate">Event Date</label>
+                    <input type="date" id="eventDate" name="eventDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="organizerName">Organizer's Name</label>
+                    <input type="text" id="organizerName" name="organizerName" placeholder="Enter the organizer's name" required>
+                </div>
+                <button type="submit" class="submit-button">Create Event</button>
+            </form>
+        </div>
+
         <div class="divider"></div>
         <div class="questions"> 
             <div class="Quess">
