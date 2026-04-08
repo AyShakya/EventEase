@@ -1,111 +1,155 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+    --ink: #2f2016;
+    --muted: #7a6657;
+    --brand: #8b5a2b;
+    --brand-dark: #5f3a1f;
+    --line: #eadccb;
+    --surface: rgba(255, 251, 246, 0.96);
+}
+
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('10.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: 0.8;
-}
-.back-button { 
-    position: absolute; 
-    top: 20px; 
-    left: 20px; 
-    font-size: 24px; 
-    color: #333; 
-    text-decoration: none; 
-    background-color: rgba(255, 255, 255, 0.8); 
-    padding: 10px; 
-    border-radius: 50%; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    transition: background-color 0.3s, transform 0.3s; 
-} 
-.back-button:hover { 
-    background-color: rgba(255, 255, 255, 1); 
-    transform: scale(1.1); 
-}
-#eventCardsContainer{
-    width: 75%;
-}
-.event-card {
-    display: flex;
-    align-items: center;
-    background-color: #fff;
-    margin: 20px;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s, cursor 0.3s;
-    width: 100%;
-}
-.event-card.hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-}
-.event-date {
-    background-color: #e74c3c;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    border-radius: 8px 0 0 8px;
-    width: 80px;
-    transition: background-image 0.3s, background-color 0.3s;
-}
-.event-card.hover .event-date {
-    background-color: transparent;
-    background-image: url('your-image-url.jpg'); 
+    padding: 80px 0 40px;
+    background: linear-gradient(rgba(34, 19, 8, 0.68), rgba(34, 19, 8, 0.68)), url('10.jpg');
     background-size: cover;
     background-position: center;
 }
-.event-date.red {
-    background-color: #DC143C;
+
+.back-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    font-size: 1.1rem;
+    color: var(--brand-dark);
+    text-decoration: none;
+    background: rgba(255, 248, 238, 0.95);
+    border-radius: 999px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22);
 }
+
+#eventCardsContainer {
+    width: min(1100px, 90%);
+}
+
+.event-card {
+    display: flex;
+    align-items: center;
+    background: var(--surface);
+    margin: 16px 0;
+    padding: 18px;
+    border-radius: 16px;
+    border: 1px solid var(--line);
+    box-shadow: 0 10px 28px rgba(73, 47, 28, 0.14);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.event-card.hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 32px rgba(73, 47, 28, 0.2);
+}
+
+.event-date {
+    color: #fff7ec;
+    padding: 16px;
+    text-align: center;
+    border-radius: 12px;
+    width: 84px;
+    transition: background-image 0.3s, background-color 0.3s;
+}
+
+.event-date.red,
 .event-date.blue {
-    background-color: #6495ED;
+    background: linear-gradient(135deg, #9d5b24, #704124);
 }
-.event-date h2, .event-date p {
+
+.event-card.hover .event-date {
+    background-color: transparent;
+    background-size: cover;
+    background-position: center;
+}
+
+.event-date h2,
+.event-date p {
     margin: 0;
-    font-size: 24px;
-    opacity: 1;
     transition: opacity 0.3s;
 }
+
+.event-date h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.event-date p {
+    letter-spacing: 1.4px;
+    font-size: 0.75rem;
+}
+
 .event-card.hover .event-date h2,
 .event-card.hover .event-date p {
     opacity: 0;
 }
+
 .event-details {
     flex: 1;
-    padding: 0 20px;
+    padding: 0 22px;
 }
-.event-details a{
+
+.event-details a {
     text-decoration: none;
     color: inherit;
 }
+
 .event-details h3 {
-    margin: 0;
-    font-size: 20px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    margin-bottom: 3px;
+    color: var(--ink);
 }
+
 .event-details p {
-    margin: 5px 0;
-    color: #777;
+    color: var(--muted);
 }
+
 .social-icons {
     display: flex;
     align-items: center;
 }
+
 .social-icons a {
-    margin-left: 10px;
-    color: #555;
-    text-decoration: none;
-    font-size: 20px;
-    transition: color 0.3s;
+    margin-left: 12px;
+    color: var(--brand-dark);
+    font-size: 1.15rem;
 }
+
 .social-icons a:hover {
-    color: #3498db; 
+    color: var(--brand);
+}
+
+@media (max-width: 760px) {
+    .event-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .event-details {
+        padding: 0;
+    }
 }
